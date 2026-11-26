@@ -30,7 +30,7 @@ DATASET GENERATION:
 • Generation of expression values:
 Expression values are constructed from three components. First, a baseline value varies by gene. Second, an increment of 15 is added to the first 50 genes in treatment samples only. Third, random noise is added to introduce variation. Negative values are prevented by taking the greater of zero and the calculated value.
 
-                                         **Expression = max(0, Baseline + Treatment Effect + Random Noise)**
+                                         Expression = max(0, Baseline + Treatment Effect + Random Noise)
 
 The random component uses seed 42 to support reproducibility. The first 50 genes have an intentionally introduced treatment-associated signal. This known design allows the comparison step to demonstrate whether the pattern can be recovered.
 
